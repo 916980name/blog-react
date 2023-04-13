@@ -271,12 +271,12 @@ class Articles extends Component {
             <div className="title">{this.state.articleDetail.title}</div>
             <div className="author">
               <div className="avatar">
-                <Avatar
+                {/* <Avatar
                   className="auth-logo"
                   src={logo}
                   size={50}
                   icon="user"
-                />
+                /> */}
               </div>{' '}
               <div className="info">
                 <span className="name">

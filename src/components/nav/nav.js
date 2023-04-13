@@ -1,5 +1,5 @@
 import './index.less';
-import logo from '../../assets/logo.jpg';
+import logo from '../../assets/logo.png';
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -103,7 +103,9 @@ class Nav extends Component {
     } else if (name === '/articles') {
       key = '1';
       navTitle = '文章';
-    } else if (name === '/hot') {
+    } 
+    /*
+    else if (name === '/hot') {
       key = '2';
       navTitle = '热门';
     } else if (name === '/timeLine') {
@@ -125,6 +127,7 @@ class Nav extends Component {
       key = '8';
       navTitle = '归档';
     }
+    */
     this.setState({
       navTitle,
       menuCurrent: key,
@@ -248,7 +251,7 @@ class Nav extends Component {
           >
             <Row className="container">
               <Col style={{ width: '25%', float: 'left', lineHeight: '64px' }}>
-                <a href="http://biaochenxuying.cn/main.html">
+                <a href="/">
                   <div className="logo">
                     <img src={logo} alt="" />
                   </div>
@@ -289,7 +292,7 @@ class Nav extends Component {
           >
             <Row className="container">
               <Col style={{ width: '120px', float: 'left' }}>
-                <a href="http://biaochenxuying.cn/main.html">
+                <a href="/">
                   <div className="logo ">
                     <img src={logo} alt="" />
                   </div>
@@ -316,6 +319,7 @@ class Nav extends Component {
                       文章
                     </Link>
                   </Menu.Item>
+                  {/* 
                   <Menu.Item key="2">
                     <Link to="/hot">
                       <Icon type="fire" theme="outlined" />
@@ -352,12 +356,14 @@ class Nav extends Component {
                       关于
                     </Link>
                   </Menu.Item>
+                  */}
                 </Menu>
               </Col>
               <Col
                 style={{ textAlign: 'right', width: '300px', float: 'left' }}
               >
-                {userInfo ? (
+                {/*
+                userInfo ? (
                   <Menu
                     onClick={this.handleLogout}
                     style={{
@@ -406,7 +412,8 @@ class Nav extends Component {
                       注 册
                     </Button>
                   </div>
-                )}
+                )
+                */}
               </Col>
             </Row>
           </Header>
