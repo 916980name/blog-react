@@ -129,12 +129,12 @@ class SliderRight extends Component {
           {list}
         </div>
         <div className="introduce">
-          <div className="title">技术以内的 BB</div>
+          {/* <div className="title">技术以内的 BB</div> */}
           <div className="content">
           </div>
         </div>
         <div className="introduce">
-          <div className="title">技术以外的 BB</div>
+          {/* <div className="title">技术以外的 BB</div> */}
           <div className="content">
           </div>
         </div>
