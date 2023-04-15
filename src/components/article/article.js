@@ -27,7 +27,7 @@ class Articles extends Component {
       type: 1, //文章类型 => 1: 普通文章，2: 简历，3: 管理员介绍
       articleDetail: {
         _id: '',
-        author: '夜尽天明',
+        author: '',
         category: [],
         comments: [],
         create_time: '',
@@ -226,15 +226,15 @@ class Articles extends Component {
   }
 
   componentWillUnmount() {
-    document.title = '夜尽天明 的博客网站';
+    document.title = '博客网站';
     document
       .getElementById('keywords')
-      .setAttribute('content', '夜尽天明 的博客网站');
+      .setAttribute('content', '博客网站');
     document
       .getElementById('description')
       .setAttribute(
         'content',
-        '分享大前端开发等相关的技术文章，热点资源，全栈程序员的成长之路。',
+        '分享前端开发等相关的技术文章，热点资源，全栈程序员的成长之路。',
       );
   }
 
