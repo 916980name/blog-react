@@ -1,10 +1,9 @@
 import './index.less';
 import './marked.css';
-import logo from '../../assets/userLogo.jpeg';
 import React, { Component } from 'react';
 import Comment from '../comments/comment';
 import CommentList from '../comments/list';
-import { Icon, Avatar, message, Button } from 'antd';
+import { Icon, message, Button } from 'antd';
 import https from '../../utils/https';
 import urls from '../../utils/urls';
 import LoadingCom from '../loading/loading';

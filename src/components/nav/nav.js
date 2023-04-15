@@ -9,10 +9,8 @@ import {
   Menu,
   Row,
   Col,
-  Button,
   Drawer,
   message,
-  Avatar,
 } from 'antd';
 import Register from '../register/register';
 import Login from '../login/login';
@@ -24,8 +22,8 @@ import { loginSuccess, loginFailure } from '../../store/actions/user';
 import LoadingCom from '../loading/loading';
 
 const { Header } = Layout;
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+// const SubMenu = Menu.SubMenu;
+// const MenuItemGroup = Menu.ItemGroup;
 
 @connect(
   state => state.user,
