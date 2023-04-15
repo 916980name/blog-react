@@ -6,6 +6,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import configureStore, { history } from './store/configureStore'
+import AnalyticsBlock from './utils/analytics';
+AnalyticsBlock()
 
 const store = configureStore()
 
@@ -22,10 +24,10 @@ render();
 
 // Hot reloading
 if (module.hot) {
-  // Reload components
-  module.hot.accept('./App', () => {
-    render()
-  })
+	// Reload components
+	module.hot.accept('./App', () => {
+		render()
+	})
 }
 
 // If you want your app to work offline and load faster, you can change
