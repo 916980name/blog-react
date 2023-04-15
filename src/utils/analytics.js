@@ -5,7 +5,7 @@ async function AnalyticsBlock(props) {
         // Do nothing
         return
     } else {
-        await initGoogle('https://www.googletagmanager.com/gtag/js?id=G-QZEYV245XL')
+        await initGoogle('https://www.googletagmanager.com/gtag/js?id=G-5DPT0HKPVF')
     }
 }
 
@@ -17,7 +17,7 @@ function initGoogle(src) {
         script.onload = resolve;
         document.head.appendChild(script);
         const script2 = document.createElement('script');
-        script2.textContent = 'window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag("js", new Date()); gtag("config", "G-QZEYV245XL"); '
+        script2.textContent = 'window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag("js", new Date()); gtag("config", "G-5DPT0HKPVF"); '
         document.head.appendChild(script2);
     });
 }
