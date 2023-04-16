@@ -45,7 +45,9 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_IP }}
 
       - name: SSH Destination
-        run: scp -r build/* staging:${{ secrets.BUILD_DEST }}
-
-      - name: Copy Destination
-        run: ssh staging ${{ secrets.RUN_SCRIPT }} 
+        run: |
+          scp -r build/* staging:$SSH_DEST
+          ssh staging  $SSH_RUN
+        env:
+          SSH_DEST: ${{ secrets.BUILD_DEST }} 
+          SSH_RUN: ${{ secrets.RUN_SCRIPT }}
