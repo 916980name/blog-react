@@ -226,10 +226,10 @@ class Nav extends Component {
     });
   }
   render() {
-    let userInfo = '';
-    if (window.sessionStorage.userInfo) {
-      userInfo = JSON.parse(window.sessionStorage.userInfo);
-    }
+    // let userInfo = '';
+    // if (window.sessionStorage.userInfo) {
+    //   userInfo = JSON.parse(window.sessionStorage.userInfo);
+    // }
 
     return (
       <div className="left">
