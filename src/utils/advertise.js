@@ -1,11 +1,11 @@
 import React from 'react';
 
 function AdvertiseBlock() {
-    const isProduction = process.env.NODE_ENV === 'production';
+    const isDev = process.env.NODE_ENV === 'development';
 
     return (
         <div>
-            {isProduction && (
+            {!isDev && (
                 <div>
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7121848006198705"
                         crossorigin="anonymous"></script>
