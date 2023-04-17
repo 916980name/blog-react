@@ -1,9 +1,9 @@
 import './index.less';
 import './marked.css';
 import React, { Component } from 'react';
-import Comment from '../comments/comment';
-import CommentList from '../comments/list';
-import { Icon, message, Button } from 'antd';
+// import Comment from '../comments/comment';
+// import CommentList from '../comments/list';
+import { Icon, message } from 'antd';
 import https from '../../utils/https';
 import urls from '../../utils/urls';
 import LoadingCom from '../loading/loading';
@@ -225,15 +225,15 @@ class Articles extends Component {
   }
 
   componentWillUnmount() {
-    document.title = '博客网站';
+    document.title = 'Blog';
     document
       .getElementById('keywords')
-      .setAttribute('content', '博客网站');
+      .setAttribute('content', 'A blog website for personal recording development experiences');
     document
       .getElementById('description')
       .setAttribute(
         'content',
-        '分享前端开发等相关的技术文章，热点资源，全栈程序员的成长之路。',
+        'A blog website for personal recording development experiences',
       );
   }
 
@@ -329,7 +329,7 @@ class Articles extends Component {
               }}
             />
           </div>
-          <div className="heart">
+          {/* <div className="heart">
             <Button
               type="danger"
               size="large"
@@ -339,19 +339,19 @@ class Articles extends Component {
             >
               点赞
             </Button>
-          </div>
-          <Comment
+          </div> */}
+          {/* <Comment
             content={this.state.content}
             isSubmitLoading={this.state.isSubmitLoading}
             handleChange={this.handleChange}
             handleAddComment={this.handleAddComment}
-          />
-          <CommentList
+          /> */}
+          {/* <CommentList
             numbers={this.state.articleDetail.meta.comments}
             list={this.state.articleDetail.comments}
             article_id={this.state.articleDetail._id}
             refreshArticle={this.refreshArticle}
-          />
+          /> */}
         </div>
         {!this.state.isMobile ? (
           <div

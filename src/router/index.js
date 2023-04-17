@@ -34,8 +34,8 @@ let config = [
     }),
   },
   {
-    name: 'hot',
-    path: '/hot',
+    name: 'life',
+    path: '/life',
     exact: true,
     component: Loadable({
       loader: () => import('../components/articles/articles.js'),

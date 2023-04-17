@@ -125,7 +125,7 @@ class SliderRight extends Component {
           {/* <div className="footer">{linkChildren}</div> */}
         </div>
         <div className="tags">
-          <div className="title">标签云</div>
+          <div className="title">Article Tags</div>
           {list}
         </div>
         <div className="introduce">

@@ -97,16 +97,16 @@ class Nav extends Component {
     let navTitle = '';
     if (name === '/') {
       key = '9';
-      navTitle = '首页';
+      navTitle = 'Home';
     } else if (name === '/articles') {
       key = '1';
-      navTitle = '文章';
+      navTitle = 'Articles';
+    } else if (name === '/life') {
+      key = '2';
+      navTitle = 'Life';
     } 
     /*
-    else if (name === '/hot') {
-      key = '2';
-      navTitle = '热门';
-    } else if (name === '/timeLine') {
+    else if (name === '/timeLine') {
       key = '3';
       navTitle = '历程';
     } else if (name === '/message') {
@@ -308,22 +308,22 @@ class Nav extends Component {
                   <Menu.Item key="9">
                     <Link to="/">
                       <Icon type="home" theme="outlined" />
-                      首页
+                      Home
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="1">
                     <Link to="/articles">
                       <Icon type="ordered-list" theme="outlined" />
-                      文章
+                      Articles
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="2">
+                    <Link to="/life">
+                      <Icon type="fire" theme="outlined" />
+                      Life
                     </Link>
                   </Menu.Item>
                   {/* 
-                  <Menu.Item key="2">
-                    <Link to="/hot">
-                      <Icon type="fire" theme="outlined" />
-                      热门
-                    </Link>
-                  </Menu.Item>
                   <Menu.Item key="8">
                     <Link to="/archive">
                       <Icon type="project" theme="outlined" />
@@ -427,19 +427,20 @@ class Nav extends Component {
           <div className="drawer">
             <p onClick={this.onClose}>
               <Link to="/">
-                <Icon type="home" /> 首页
+                <Icon type="home" /> Home
               </Link>
             </p>
             <p onClick={this.onClose}>
               <Link to="/articles">
-                <Icon type="ordered-list" /> 文章
+                <Icon type="ordered-list" /> Articles
               </Link>
             </p>
             <p onClick={this.onClose}>
-              <Link to="/hot">
-                <Icon type="fire" onClick={this.showLoginModal} /> 热门
+              <Link to="/life">
+                <Icon type="fire" onClick={this.showLoginModal} /> Life
               </Link>
             </p>
+            {/*
             <p onClick={this.onClose}>
               <Link to="/archive">
                 <Icon type="project" onClick={this.showLoginModal} /> 归档
@@ -465,8 +466,9 @@ class Nav extends Component {
                 <Icon type="user" onClick={this.showLoginModal} /> 关于
               </Link>
             </p>
+              */}
 
-            {userInfo ? (
+            {/*userInfo ? (
               <div onClick={this.handleLogout}>
                 <p>{userInfo.name}</p>
                 <p>
@@ -482,7 +484,7 @@ class Nav extends Component {
                   <Icon type="logout" /> 注册{' '}
                 </p>
               </div>
-            )}
+            )*/}
           </div>
         </Drawer>
         <Login

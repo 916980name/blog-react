@@ -64,6 +64,7 @@ class Articles extends Component {
       pageNum: 1,
       pageSize: 10,
       articlesList: [],
+      categoryList: [],
       total: 0,
     };
     this.handleSearch = this.handleSearch.bind(this);
@@ -99,6 +100,7 @@ class Articles extends Component {
   }
 
   componentDidMount() {
+    this.requestCatagoryList();
     if (this.props.location.pathname === '/hot') {
       this.setState(
         {
@@ -166,6 +168,29 @@ class Articles extends Component {
       });
   }
 
+  requestCatagoryList() {
+    https
+      .get(
+        urls.getCategoryList,
+        {
+          params: {
+            keyword: null,
+            pageNum: 1,
+            pageSize: 100,
+          },
+        },
+        { withCredentials: true },
+      )
+      .then(res => {
+        this.setState(preState => ({
+          categoryList: res.data.data.list
+        }))
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+
   render() {
     const list = this.state.articlesList.map((item, i) => (
       <ReactCSSTransitionGroup
@@ -183,7 +208,7 @@ class Articles extends Component {
               data-src={item.img_url}
               data-has-lazy-src="false"
               src={bg}
-              alt="文章封面"
+              alt="cover"
             />
           </a>
           <div className="content">
@@ -224,11 +249,23 @@ class Articles extends Component {
         </li>
       </ReactCSSTransitionGroup>
     ));
+    const categoryList = this.state.categoryList.map((item, i) => (
+      <Link
+        className="item"
+        key={item._id}
+        to={`/articles?category_id=${item._id}`}
+      >
+        <span key={item._id}>{item.name}</span>
+      </Link>
+    ));
 
     return (
       <div className="left">
+        <div className="categories">
+          Category: {categoryList}
+        </div>
         {this.state.tag_id ? (
-          <h3 className="left-title">{this.state.tag_name} 相关的文章：</h3>
+          <h3 className="left-title">{this.state.tag_name} Related Articles: </h3>
         ) : (
           ''
         )}
