@@ -50,7 +50,7 @@ jobs:
 
       - name: SSH Destination
         run: |
-          tar -zcf build/* -C blog.tgz
+          tar -zcf blog.tgz build/*
           scp blog.tgz staging:$SSH_DEST
           ssh staging $SSH_RUN
         env:
