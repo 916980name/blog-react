@@ -4,6 +4,7 @@ import { message } from 'antd';
 import { Link } from 'react-router-dom';
 import https from '../../utils/https';
 import urls from '../../utils/urls';
+import AdvertiseBlock from '../../utils/advertise';
 
 class SliderRight extends Component {
   constructor(props) {
@@ -137,6 +138,7 @@ class SliderRight extends Component {
           <div className="content">
           </div>
         </div>
+        <AdvertiseBlock/>
       </div>
     );
   }
