@@ -215,7 +215,7 @@ module.exports = function(webpackEnv) {
           // Default number of concurrent runs: os.cpus().length - 1
           parallel: true,
           // Enable file caching
-          // cache: true,
+          cache: true,
           sourceMap: shouldUseSourceMap,
         }),
         // This is only used in production mode
