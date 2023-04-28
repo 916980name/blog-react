@@ -131,7 +131,7 @@ const Tools = () => {
   return (
     <div>
       <Row>
-        <Col span={3} style={{ padding: '5px' }}>
+        <Col span={4} style={{ padding: '5px' }}>
           <Title level={4}>Menu</Title>
           <Menu
             onClick={onMenuClick}
@@ -153,7 +153,7 @@ const Tools = () => {
             </SubMenu>
           </Menu>
         </Col>
-        <Col span={21}>
+        <Col span={20}>
           {components[activeComponent]}
         </Col>
       </Row>
