@@ -318,9 +318,9 @@ class Nav extends Component {
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="2">
-                    <Link to="/life">
-                      <Icon type="fire" theme="outlined" />
-                      Life
+                    <Link to="/tools">
+                      <Icon type="tool" theme="outlined" />
+                      Tools
                     </Link>
                   </Menu.Item>
                   {/* 

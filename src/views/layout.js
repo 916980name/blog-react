@@ -21,6 +21,7 @@ class Layouts extends Component {
     let isShowSlider = false;
     let pathName = this.props.location.pathname;
     if (
+      pathName !== '/tools' &&
       pathName !== '/articleDetail' &&
       pathName !== '/about' &&
       !isMobileOrPc()

@@ -34,11 +34,11 @@ let config = [
     }),
   },
   {
-    name: 'life',
-    path: '/life',
+    name: 'tools',
+    path: '/tools',
     exact: true,
     component: Loadable({
-      loader: () => import('../components/articles/articles.js'),
+      loader: () => import('../components/tools/tools.js'),
       loading: loadingComponent,
       delay: 300,
     }),
